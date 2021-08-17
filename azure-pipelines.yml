@@ -59,14 +59,14 @@ steps:
     inputs:
       targetType: "inline"
       script: Get-AzResourceGroup -Name $(azure_resource_group_name) | Remove-AzResourceGroup -Force
-  - task: PublishTestResults@2
-    inputs:
-      testResultsFormat: "NUnit"
-      testResultsFiles: "$(System.DefaultWorkingDirectory)/server.infrastructure.tests.XML"
-      failTaskOnFailedTests: true
-
-  - task: PublishTestResults@2
-    inputs:
-      testResultsFormat: "NUnit"
-      testResultsFiles: "$(System.DefaultWorkingDirectory)/server.template.tests.XML"
-      failTaskOnFailedTests: true
+  # - task: PublishTestResults@2
+  #   inputs:
+  #     testResultsFormat: "NUnit"
+  #     testResultsFiles: "$(System.DefaultWorkingDirectory)/server.infrastructure.tests.XML"
+  #     failTaskOnFailedTests: true
+# 
+  # - task: PublishTestResults@2
+  #   inputs:
+  #     testResultsFormat: "NUnit"
+  #     testResultsFiles: "$(System.DefaultWorkingDirectory)/server.template.tests.XML"
+  #     failTaskOnFailedTests: true
