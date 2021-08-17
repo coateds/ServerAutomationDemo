@@ -15,11 +15,11 @@ variables:
   - name: azure_resource_group_name
     value: "ServerProvisionTesting-$(Build.BuildId)"
   - name: subscription_id
-    value: "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+    value: "829eeca2-0445-402d-bf81-4d00f1093c64"
   - name: application_id
-    value: "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+    value: " d391da72-0f66-473f-8c96-801bcecda187"
   - name: tenant_id
-    value: "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+    value: "94331f23-5693-4f7b-a776-be11eac6610b"
 
 steps:
   - task: PowerShell@2
@@ -65,8 +65,8 @@ steps:
       testResultsFiles: "$(System.DefaultWorkingDirectory)/server.infrastructure.tests.XML"
       failTaskOnFailedTests: true
 
-  - task: PublishTestResults@2
-    inputs:
-      testResultsFormat: "NUnit"
-      testResultsFiles: "$(System.DefaultWorkingDirectory)/server.template.tests.XML"
-      failTaskOnFailedTests: true
+  # - task: PublishTestResults@2
+  #   inputs:
+  #     testResultsFormat: "NUnit"
+  #     testResultsFiles: "$(System.DefaultWorkingDirectory)/server.template.tests.XML"
+  #     failTaskOnFailedTests: true
